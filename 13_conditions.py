@@ -18,3 +18,5 @@ if age >= 21:
     print("You are of age")
 else:
     print("You are underage")
+
+print("")
