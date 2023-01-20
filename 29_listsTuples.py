@@ -7,6 +7,7 @@ Escribir un programa que almacene las asignaturas de un curso (por ejemplo Matem
 """
 #list
 subjets = ["Math", "Physics", "Chemistry", "History", "Literature"]
+outputList = []
 math = 0
 physics = 0
 chemistry = 0
@@ -14,27 +15,33 @@ history = 0
 literature = 0
 
 #input / verification
+print("---- Grades ---")
 for element in subjets:
     if element == "Math":
         math = int(input("Grade obtained in math: "))
-        if math > 60:
-            subjets.remove(element)
+        if math < 61:
+            outputList.append(element)
     elif element == "Physics":
         physics = int(input("Grade obtained in physics: "))
-        if physics > 60:
-            subjets.remove(element)
+        if physics < 61:
+            outputList.append(element)
     elif element == "Chemistry":
         chemistry = int(input("Grade obtained in chemistry: "))
-        if chemistry > 60:
-            subjets.remove(element)
+        if chemistry < 61:
+            outputList.append(element)
     elif element == "History":
         history = int(input("Grade obtained in history: "))
-        if history > 60:
-            subjets.remove(element)                 
+        if history < 61:
+            outputList.append(element)               
     elif element == "Literature":
         literature = int(input("Grade obtained in literature: "))
-        if literature > 60:
-            subjets.remove(element)
+        if literature < 61:
+            outputList.append(element)
 
-for item in subjets:
-    print(item)
+#output / verification
+if len(outputList) == 0:
+    print(f"\nCongratulations! you don't have to repeat any subjet!")
+else:
+    print(f"\nSubjets to repeat: ")
+    for item in outputList:
+        print(" - "+item)
