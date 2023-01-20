@@ -15,6 +15,7 @@ while session == 1:
     session = int(input("Would you like to continue? (1 - Yes / 0 - No): "))
     winningNumbers.append(singleWinningNumber)
 
+#output
 winningNumbers.sort()
 print(f"\nList of lottery winning numbers: ")
 for element in winningNumbers:
